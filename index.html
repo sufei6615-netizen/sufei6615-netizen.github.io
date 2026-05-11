@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xijun Xiang - Homepage</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #2d3436;
+            --text-secondary: #636e72;
+            --link: #0984e3;
+            --link-hover: #0767b3;
+            --border: #dfe6e9;
+            --tag-bg: #f0f4f8;
+            --tag-text: #2d3436;
+            --section-hover: #f8f9fa;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1a1a2e;
+                --text: #e0e0e0;
+                --text-secondary: #a0a0b0;
+                --link: #74b9ff;
+                --link-hover: #a0d2ff;
+                --border: #2d2d44;
+                --tag-bg: #252540;
+                --tag-text: #c0c0d0;
+                --section-hover: #1f1f35;
+                --shadow: 0 1px 3px rgba(0,0,0,0.3);
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px 64px;
+        }
+
+        /* Header / About */
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+        }
+
+        .header .affiliation {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 16px;
+        }
+
+        .contact-links a {
+            color: var(--link);
+            text-decoration: none;
+            font-size: 0.925rem;
+            transition: color 0.15s;
+        }
+
+        .contact-links a:hover { color: var(--link-hover); }
+
+        /* Bio paragraph */
+        .bio {
+            margin-top: 24px;
+            text-align: left;
+            background: var(--section-hover);
+            border-radius: 10px;
+            padding: 20px 24px;
+            border: 1px solid var(--border);
+        }
+
+        .bio p { color: var(--text-secondary); font-size: 0.95rem; }
+
+        /* Sections */
+        .section { margin-bottom: 40px; }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        /* Timeline items */
+        .item {
+            display: flex;
+            gap: 16px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            transition: background 0.15s;
+            margin-bottom: 4px;
+        }
+
+        .item:hover { background: var(--section-hover); }
+
+        .item .date {
+            flex-shrink: 0;
+            width: 130px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            padding-top: 1px;
+        }
+
+        .item .body {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .item .title {
+            font-weight: 600;
+            font-size: 0.975rem;
+        }
+
+        .item .subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        /* Research interest tags */
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 56px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .item { flex-direction: column; gap: 4px; }
+            .item .date { width: auto; }
+            .container { padding: 32px 16px 48px; }
+            .header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Xijun Xiang</h1>
+            <div class="affiliation">
+                Research Assistant · The Hong Kong Polytechnic University
+            </div>
+            <div class="contact-links">
+                <a href="mailto:sufei6615@gmail.com">📧 Email</a>
+                <a href="https://github.com/sufei6615-netizen" target="_blank">💻 GitHub</a>
+            </div>
+        </div>
+
+        <!-- About Me -->
+        <div class="bio">
+            <p>
+                I am a Research Assistant at The Hong Kong Polytechnic University (PolyU).
+                My research interests focus on <strong>model evaluation</strong> and <strong>agentic AI</strong> —
+                building reliable, steerable AI systems that can reason, plan, and interact with tools in real-world settings.
+                I enjoy working at the intersection of evaluation methodology, agent architecture, and real-world deployment.
+            </p>
+        </div>
+
+        <!-- Research Interests -->
+        <div class="section">
+            <div class="section-title">🔬 Research Interests</div>
+            <div class="tag-list">
+                <span class="tag">Model Evaluation</span>
+                <span class="tag">Agentic AI</span>
+                <span class="tag">LLM Benchmarking</span>
+                <span class="tag">Tool-Use Agents</span>
+                <span class="tag">AI Alignment</span>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">📖 Education</div>
+            <div class="item">
+                <div class="date">2024.09 – 2025.12</div>
+                <div class="body">
+                    <div class="title">Master of Science</div>
+                    <div class="subtitle">The University of Hong Kong (HKU)</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="date">2020.09 – 2024.06</div>
+                <div class="body">
+                    <div class="title">Bachelor of Science</div>
+                    <div class="subtitle">Southern University of Science and Technology (SUSTech)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">💼 Experience</div>
+            <div class="item">
+                <div class="date">2026.04 – Present</div>
+                <div class="body">
+                    <div class="title">Research Assistant</div>
+                    <div class="subtitle">The Hong Kong Polytechnic University (PolyU)</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="date">2025.12 – 2026.04</div>
+                <div class="body">
+                    <div class="title">Research Intern</div>
+                    <div class="subtitle">Infix.ai, Shenzhen</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Last updated: May 2026 · Built with plain HTML & CSS
+        </div>
+
+    </div>
+</body>
+</html>
